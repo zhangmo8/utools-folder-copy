@@ -1,0 +1,20 @@
+{
+  "pluginName": "复制内容",
+  "description": "此插件用于复制文件夹下所有文件的内容，并以纯文本的形式保存",
+  "main": "index.html",
+  "version": "1.0.0",
+  "logo": "logo.png",
+  "author": "Wegi8",
+  "preload": "copy.js",
+  "homepage": "https://github.com/wegi8",
+  "features": [
+    {
+      "code": "copy",
+      "explain": "复制",
+      "cmds": [
+        "复制",
+        "复制文件夹下所有文件"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      margin-top: 20px;
+    }
+
+    .input {
+      background-color: #fff;
+      background-image: none;
+      border-radius: 4px;
+      border: 1px solid #dcdfe6;
+      box-sizing: border-box;
+      color: #606266;
+      display: inline-block;
+      font-size: inherit;
+      height: 40px;
+      line-height: 40px;
+      outline: none;
+      padding: 0 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      background: #409eff;
+      border: 1px solid #409eff;
+      color: #fff;
+      -webkit-appearance: none;
+      text-align: center;
+      box-sizing: border-box;
+      outline: none;
+      margin: 0;
+      transition: .1s;
+      font-weight: 500;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .button:focus,
+    .button:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <span>输入要copy的路径：</span>
+    <input class="input" id="value" placeholder="如：E:\study\utools" />
+  </div>
+  <div class="parent">
+    <span>输入要输出的路径：</span>
+    <input class="input" id="valueOut" placeholder="如：E:\study\utools" />
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <button class="button" id="copy">copy</button>
+  </div>
+  <script>
+    const click = () => {
+      const value = document.getElementById("value");
+      const valueOut = document.getElementById("valueOut");
+      if (value.value && valueOut.value) {
+        window.fileCopy(value.value, valueOut.value)
+      } else {
+        alert("未填入需要copy的路径");
+      }
+    }
+    const btn = document.getElementById("copy");
+    btn.onclick = click
+  </script>
+</body>
+
+</html>
