@@ -13,7 +13,10 @@
       "explain": "复制",
       "cmds": [
         "复制",
-        "复制文件夹下所有文件"
+        "复制文件夹下所有文件",
+        "copy",
+        "foldercopy",
+        "copyfolder"
       ]
     }
   ]
